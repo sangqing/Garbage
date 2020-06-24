@@ -1,0 +1,287 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/iconfont.js">
+    <style>
+
+        #projectTitle_text{margin: 21px 0 0 23px;}
+        #projectTitle_text h2{font-size: 24px;color: #333333;line-height: 25px;}
+        #projectTitle_text i{font-size: 20px;color: #c9c9c9;margin-left: 30px;}
+        #projectTitle_text p{font-size: 14px;line-height: 30px;margin:10px 0 13px 0;;}
+        #projectTitle_text span{color: b7b7b7;}
+        #projectTitle_img{width: 200;height: 150;margin: 20 20 0 0;}
+
+
+       
+        .projectList_btns{height: 54px;background: #f1f9fc;border-top: 1px solid #e1ebec;border-bottom: 1px solid #e1ebec;}
+        .projectList_btns ul{margin: 14px 0 0 20px;}
+        .projectList_btns li{float: left;width: 108px;height: 39px;border: 1px solid #dde7e9;border-bottom: none;text-align: center;line-height: 39px;background-color: #fcfdff;border-radius: 5px 5px 0 0;color: #787a7a;margin-right: 12px;cursor: pointer;}
+        .projectList_btns li.active{ color: white;background-color: #018ffb;}
+        .projectList_btns li img{display: block;margin: auto;font-size: 25px;}
+
+        .projectList_cons{margin: 20px;}
+        #projectList .projectList_cons>div{display: none;}
+        #projectList .projectList_cons>div.show{display: block;}
+        .projectList_cons .download,.projectList_cons .download2{width: 110px;height: 32px;text-align: center;line-height: 32px;font-size: 14px;color: white;border-radius: 5px;cursor: pointer;}
+        .projectList_cons .download input,.projectList_cons .download2 input{display: none;}
+        .projectList_cons .download label,.projectList_cons .download2 label{cursor: pointer;}
+        .projectList_cons .download{background: #5fd25d;}
+        .projectList_cons .download2{background: #35c1da;margin-left: 20px;}
+        .projectList_cons .search{height: 30px;width: 210px;border: 1px solid #dae8e8;border-radius: 5px;overflow: hidden;}
+        .projectList_cons .search input{height: 100%;width:177px;border: none;color: #999999;font-size: 14px;text-indent: 9px;outline: none;}
+        .projectList_cons .search button{width: 32px;height: 32px;border: none;border-left: 1px solid #dae8e8;background-image: linear-gradient(#FCFDFD,#F1F9FC);cursor: pointer;outline: none;}
+        .projectList_cons .search i{font-size: 18px;font-weight: bold;color: #a1c6d6;}
+
+
+        .zl_table{clear: both;width: 100%;border: 1px solid #dfe7e9;border-collapse: collapse;font-size: 12px;position: relative;top: 20px;}
+        .zl_table thead tr{background-color: #f1f9fc;}
+        .zl_table th{border-right: 1px solid #dfe7e9;text-align: left;color: #666666;}
+        .zl_table tr{height: 32px;line-height: 32px;text-indent: 12px;border-bottom: 1px solid #dfe7e9;}
+        .zl_table tr:hover{background-color: #f1f9fc;}  
+        .zl_table td{text-align: left;font-weight: bold;color: #5c5c5c;}
+        .zl_table th:first-child,.zl_table td:first-child{text-align: center;text-indent: 0px;}
+        .zl_table .icon-DOCtubiao{margin-right: 13px; color: #0d74c3;}
+        .zl_table .icon-xiazai1{color: #42a0ea;cursor: pointer;}
+        .zl_table .icon-iconfront-{color: #e24443;cursor: pointer;}
+
+        .zl_footer{width: 100%-1px;height: 69px;border: 1px solid #dfe7e9;border-top: none;line-height: 69px;overflow: hidden;margin-top: 20px;}
+        .zl_footer .zl_remove,.zl_footer .zl_download{width: 78px;height: 24px;border: 1px solid #c9e4f5;background-image: linear-gradient(#f7fcff,#E7F4FA);border-radius: 5px;font-size: 12px;color: #5699c4;margin-top: 18px;margin-left: 15px;cursor: pointer;}
+        .zl_footer .zl_page{margin-right: 18px;font-size: 0;}
+        .zl_footer .zl_page a{border: 1px solid #e8e8e8;padding:6px 9px;font-size: 12px;margin-left: 10px;}
+        .zl_footer .zl_page a.active{background-color: #43adff;border-color: #3d98e1;}
+
+    </style>
+</head>
+<body>
+  <header id="header">
+      <hgroug class="header_logo l">
+          <h1 class="l">
+              <img src="image/logo.png" alt="">
+          </h1>
+          <h2 class="l">正达建筑内部管理平台</h2>
+      </hgroug>
+      <ul class="header_nav r">
+          <li >
+              <i class="iconfont icon-yonghu"></i>欢迎您，武剑 管理员
+          </li>
+          <li >
+            <i class="iconfont icon-key"></i><a href="#">修改密码</a>
+        </li>
+        <li>
+            <i class="iconfont icon-ai-home"></i><a href="#">公司官网</a>
+        </li>
+        <li>
+            <i class="iconfont icon-plus-share"></i><a href="#">退出</a>
+        </li>
+      </ul>
+  </header>
+  <aside id="menu" class="l">
+      <ul >
+          <li class="active">
+              <a href="">
+              <i class="iconfont icon-building_"></i>
+              <p>项目管理</p>
+          </a></li>
+          <li><a href="">
+            <i class="iconfont icon-chengyuanyonghuguanli"></i>
+            <p>用户管理</p>
+        </a></li>
+        <li><a href="">
+            <i class="iconfont icon-xitongshezhi"></i>
+            <p>系统设置</p>
+        </a></li>
+      </ul>
+  </aside>
+  <main id="main">
+      <section class="main_container">
+          <section id="projectTitle" class="clear">
+                <div id="projectTitle_text" class="l">
+                    <h2>青田高湾绿园一期、二期工程<i class="iconfont icon-xiugai"></i></h2>
+                    <p>
+                        项目编号：<span>CN0000507</span><br>
+                        项目类型：<span>在建工程</span><br>
+                        项目负责人：<span>梅海丽</span><br>
+                        手机号码：<span>15869168967</span>
+                    </p>
+                </div>
+                <div id="projectTitle_img" class="r">
+                    <img src="image/title_img.png" alt="">
+                </div>
+          </section>
+    
+            <section id="projectList">   
+               <div class="projectList_btns">
+                   <ul>
+                       <li>视屏监控</li>
+                       <li>考察管理</li>
+                       <li>安全巡查</li>
+                       <li class="active">资料管理<br><img src="image/xiao.png" alt=""></li>
+                   </ul>
+               </div>
+               <div class="projectList_cons">
+                   <div>11111111</div>
+                   <div>22222222</div>
+                   <div>33333333</div>
+                   <div class="show">
+                        <div class="l download">
+                            <label>
+                                <input type="file">
+                                <i class="iconfont icon-icon-"></i>&nbsp;&nbsp;单个上传
+                            </label>
+                        </div>
+                        <div class="l download2">
+                            <label >
+                                <input type="file">
+                                <i class="iconfont icon-icon_shangchuan-"></i>&nbsp;&nbsp;批量上传
+                            </label>
+                        </div>
+                        <div class="search r">
+                            <input type="text" placeholder="请输入关键字">
+                            <button class="r"><i class="iconfont icon-fangdajing"></i></button>
+                        </div>
+                        <table class="zl_table">
+                            <thead>
+                                <tr>
+                                    <th width="50"><input type="checkbox"></th>
+                                    <th>文档名称</th>
+                                    <th width="167">文档大小</th>
+                                    <th width="148">上传者</th>
+                                    <th width="167">上传时间</th>
+                                    <th width="80">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td><i class="iconfont icon-DOCtubiao"></i>安全专项方案.doc</td>
+                                    <td>21.3KB</td>
+                                    <td>程文耀</td>
+                                    <td>2016-3-14</td>
+                                    <td><i  class="iconfont icon-xiazai1"></i>&nbsp;&nbsp;&nbsp;<i class="iconfont icon-iconfront-"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td><i class="iconfont icon-DOCtubiao"></i>安全专项方案.doc</td>
+                                    <td>21.3KB</td>
+                                    <td>程文耀</td>
+                                    <td>2016-3-14</td>
+                                    <td><i  class="iconfont icon-xiazai1"></i>&nbsp;&nbsp;&nbsp;<i class="iconfont icon-iconfront-"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td><i class="iconfont icon-DOCtubiao"></i>安全专项方案.doc</td>
+                                    <td>21.3KB</td>
+                                    <td>程文耀</td>
+                                    <td>2016-3-14</td>
+                                    <td><i  class="iconfont icon-xiazai1"></i>&nbsp;&nbsp;&nbsp;<i class="iconfont icon-iconfront-"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td><i class="iconfont icon-DOCtubiao"></i>安全专项方案.doc</td>
+                                    <td>21.3KB</td>
+                                    <td>程文耀</td>
+                                    <td>2016-3-14</td>
+                                    <td><i  class="iconfont icon-xiazai1"></i>&nbsp;&nbsp;&nbsp;<i class="iconfont icon-iconfront-"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td><i class="iconfont icon-DOCtubiao"></i>安全专项方案.doc</td>
+                                    <td>21.3KB</td>
+                                    <td>程文耀</td>
+                                    <td>2016-3-14</td>
+                                    <td><i  class="iconfont icon-xiazai1"></i>&nbsp;&nbsp;&nbsp;<i class="iconfont icon-iconfront-"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td><i class="iconfont icon-DOCtubiao"></i>安全专项方案.doc</td>
+                                    <td>21.3KB</td>
+                                    <td>程文耀</td>
+                                    <td>2016-3-14</td>
+                                    <td><i  class="iconfont icon-xiazai1"></i>&nbsp;&nbsp;&nbsp;<i class="iconfont icon-iconfront-"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td><i class="iconfont icon-DOCtubiao"></i>安全专项方案.doc</td>
+                                    <td>21.3KB</td>
+                                    <td>程文耀</td>
+                                    <td>2016-3-14</td>
+                                    <td><i  class="iconfont icon-xiazai1"></i>&nbsp;&nbsp;&nbsp;<i class="iconfont icon-iconfront-"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td><i class="iconfont icon-DOCtubiao"></i>安全专项方案.doc</td>
+                                    <td>21.3KB</td>
+                                    <td>程文耀</td>
+                                    <td>2016-3-14</td>
+                                    <td><i  class="iconfont icon-xiazai1"></i>&nbsp;&nbsp;&nbsp;<i class="iconfont icon-iconfront-"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td><i class="iconfont icon-DOCtubiao"></i>安全专项方案.doc</td>
+                                    <td>21.3KB</td>
+                                    <td>程文耀</td>
+                                    <td>2016-3-14</td>
+                                    <td><i  class="iconfont icon-xiazai1"></i>&nbsp;&nbsp;&nbsp;<i class="iconfont icon-iconfront-"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td><i class="iconfont icon-DOCtubiao"></i>安全专项方案.doc</td>
+                                    <td>21.3KB</td>
+                                    <td>程文耀</td>
+                                    <td>2016-3-14</td>
+                                    <td><i  class="iconfont icon-xiazai1"></i>&nbsp;&nbsp;&nbsp;<i class="iconfont icon-iconfront-"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td><i class="iconfont icon-DOCtubiao"></i>安全专项方案.doc</td>
+                                    <td>21.3KB</td>
+                                    <td>程文耀</td>
+                                    <td>2016-3-14</td>
+                                    <td><i  class="iconfont icon-xiazai1"></i>&nbsp;&nbsp;&nbsp;<i class="iconfont icon-iconfront-"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td><i class="iconfont icon-DOCtubiao"></i>安全专项方案.doc</td>
+                                    <td>21.3KB</td>
+                                    <td>程文耀</td>
+                                    <td>2016-3-14</td>
+                                    <td><i  class="iconfont icon-xiazai1"></i>&nbsp;&nbsp;&nbsp;<i class="iconfont icon-iconfront-"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td><i class="iconfont icon-DOCtubiao"></i>安全专项方案.doc</td>
+                                    <td>21.3KB</td>
+                                    <td>程文耀</td>
+                                    <td>2016-3-14</td>
+                                    <td><i  class="iconfont icon-xiazai1"></i>&nbsp;&nbsp;&nbsp;<i class="iconfont icon-iconfront-"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="zl_footer">
+                            <button class="zl_remove ">批量删除</button>
+                            <button class="zl_download ">批量下载</button>
+                            <div class="zl_page r">
+                                <a href="#">共12页</a>
+                                <a href="#">首页</a>
+                                <a href="#">上一页</a>
+                                <a href="#" class="active">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">下一页</a>
+                                <a href="#">尾页</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </section>
+  </main>
+  <footer id="footer">
+      Copyright 0 2009 -2016 丽水市正达建筑工程有限公司  来了rightsreserved。 技术支持：红点智能
+  </footer>
+</body>
+</html>

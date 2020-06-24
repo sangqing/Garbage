@@ -1,0 +1,36 @@
+*{margin: 0;padding: 0;}
+ul,ol{list-style: none;}
+img{display: block;}
+h1,h2,h3{font-size: 16px;font-weight: normal;}
+a{text-decoration: none;color: #333333;}
+html,body{font-family: Arial;height: 100%;overflow-y: hidden;}
+
+.l{float: left;}
+.r{float: right;}
+.clear:after{content: "";display: block;clear: both;}
+
+#header{width: 100%;height: 80px;background-color: #018ffb;color: white;}
+
+#header .header_logo{height: 100%;line-height: 80px;margin-left: 5px;}
+#header .header_nav{height: 100%;line-height: 80px;margin-right: 38px;}
+#header .header_logo h1{margin-top: 10px;}
+
+#header .header_nav ul li:last-child{margin-right: 50px;}
+#header .header_nav li{float: left;margin-left: 27px;}
+#header .header_nav li a{color: white;}
+#header .header_nav li i{margin-right: 8px;}
+#header .header_nav li i.icon-yonghu{font-size: 25px;position: relative;top: 4px;line-height: 8px;}
+
+#menu{width: 200px;height:calc(100% - 80px);background: #424147;}
+#menu ul{color: #9a999e;}
+#menu li{height: 140px;border-bottom: 1px #3a393f solid;text-align: center;}
+#menu ul li.active{color: white;background: #4e4d53;}
+#menu  li a{color: inherit;width: 100%;height: 100%;display: block;padding-top:35px ;box-sizing: border-box;}
+#menu  li i{font-size: 40px;}
+#menu  li p{margin-top: 5px;}
+
+#main{overflow: hidden;height: calc(100% - 80px - 50px);}
+#main .main_container{height: 100%;overflow: auto;}
+
+
+#footer{height: 49px;color: #94999c;border-top: 1px solid dee6e8;background: #f1f9fc;line-height: 50px;text-align: right;font-size: 12px;margin-right: 20px;}
